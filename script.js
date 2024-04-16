@@ -1,22 +1,26 @@
-const display = document.getElementById("display");
+let display = document.getElementById("display")
 
-function appendToDisplay(input) {
- display.value +=input;
-}
-function clearDisplay(){
-    display.value = ""
+
+function appendToDisplay (Input) {
+    display.value +=Input;
+
 }
 
-function clearDigit() {
+function ClearDisplay () {
+
+    display.value = "";
+}
+
+
+function Clear() {
     display.value = display.value.slice(0, -1);
 }
 
-
-function calculate(){
-    try{
-        display.value=eval(display.value);
-    }
-    catch(error){
-        display.value= "math error";
+function Equals() {
+    try {
+        display.value = eval(display.value);
+    } catch (error) {
+        display.value = "Math Error";
     }
 }
+
